@@ -8,7 +8,7 @@ tab:Button("Button", function()
 print("ishowspeed")
 end)
 
-lib:Notification("Notification", "Hello!", "Hi!"
+lib:Notification("Notification", "Hello!", "Hi!")
 
 tab:Toggle("Toggle",false, function(t)
 print(t)
@@ -23,7 +23,7 @@ print(t)
 end)
 
 tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(t)
-print(t
+print(t)
 end)
 
 tab:Textbox("Textbox",true, function(t)
