@@ -6,6 +6,9 @@ if not game:IsLoaded() then
     until game:IsLoaded()
 end
 
+local log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Artifacttx/YumeHub/refs/heads/main/Script/Unknow.lua"))()
+log:Load()
+
 _G.GameList = {
 	[537413528] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Build%20a%20boat.lua",
 	[3101667897] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
