@@ -5,8 +5,8 @@ local log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Artifactt
 _G.GameList = {
     [537413528] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Build%20a%20boat.lua",
     [3101667897] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
-    [3232996272] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",  -- Added game ID
-    [3276265788] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",  -- Added game ID
+    [3232996272] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
+    [3276265788] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
 }
 
 _G.CheckGame = _G.GameList[game.PlaceId]
