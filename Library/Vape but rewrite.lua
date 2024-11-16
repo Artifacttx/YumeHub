@@ -470,62 +470,71 @@ Hub.TextXAlignment = Enum.TextXAlignment.Left
         local tabcontent = {}
         function tabcontent:Button(text, callback)
             local Button = Instance.new("TextButton")
-            local ButtonCorner = Instance.new("UICorner")
-            local ButtonTitle = Instance.new("TextLabel")
+local ButtonCorner = Instance.new("UICorner")
+local ButtonTitle = Instance.new("TextLabel")
+local ButtonImage = Instance.new("ImageLabel")
 
-            Button.Name = "Button"
-            Button.Parent = Tab
-            Button.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-            Button.Size = UDim2.new(0, 363, 0, 42)
-            Button.AutoButtonColor = false
-            Button.Font = Enum.Font.SourceSans
-            Button.Text = ""
-            Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-            Button.TextSize = 14.000
+Button.Name = "Button"
+Button.Parent = Tab
+Button.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Button.Size = UDim2.new(0, 363, 0, 42)
+Button.AutoButtonColor = false
+Button.Font = Enum.Font.SourceSans
+Button.Text = ""
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
 
-            ButtonCorner.CornerRadius = UDim.new(0, 5)
-            ButtonCorner.Name = "ButtonCorner"
-            ButtonCorner.Parent = Button
+ButtonCorner.CornerRadius = UDim.new(0, 5)
+ButtonCorner.Name = "ButtonCorner"
+ButtonCorner.Parent = Button
 
-            ButtonTitle.Name = "ButtonTitle"
-            ButtonTitle.Parent = Button
-            ButtonTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            ButtonTitle.BackgroundTransparency = 1.000
-            ButtonTitle.Position = UDim2.new(0.0358126722, 0, 0, 0)
-            ButtonTitle.Size = UDim2.new(0, 187, 0, 42)
-            ButtonTitle.Font = Enum.Font.Gotham
-            ButtonTitle.Text = text
-            ButtonTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-            ButtonTitle.TextSize = 14.000
-            ButtonTitle.TextXAlignment = Enum.TextXAlignment.Left
+ButtonTitle.Name = "ButtonTitle"
+ButtonTitle.Parent = Button
+ButtonTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonTitle.BackgroundTransparency = 1.000
+ButtonTitle.Position = UDim2.new(0.0358126722, 0, 0, 0)
+ButtonTitle.Size = UDim2.new(0, 187, 0, 42)
+ButtonTitle.Font = Enum.Font.Gotham
+ButtonTitle.Text = text
+ButtonTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+ButtonTitle.TextSize = 14.000
+ButtonTitle.TextXAlignment = Enum.TextXAlignment.Left
 
-            Button.MouseEnter:Connect(
-                function()
-                    TweenService:Create(
-                        Button,
-                        TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {BackgroundColor3 = Color3.fromRGB(37, 37, 37)}
-                    ):Play()
-                end
-            )
+-- Create the ImageLabel for the button
+ButtonImage.Name = "ButtonImage"
+ButtonImage.Parent = Button
+ButtonImage.BackgroundTransparency = 1.000
+ButtonImage.Position = UDim2.new(1, -42, 0.1, 0) -- Positioned on the right side of the button
+ButtonImage.Size = UDim2.new(0, 32, 0, 32) -- Set the size of the image
+ButtonImage.Image = "rbxassetid://102123999903854" -- Updated image asset ID
 
-            Button.MouseLeave:Connect(
-                function()
-                    TweenService:Create(
-                        Button,
-                        TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {BackgroundColor3 = Color3.fromRGB(34, 34, 34)}
-                    ):Play()
-                end
-            )
+Button.MouseEnter:Connect(
+    function()
+        TweenService:Create(
+            Button,
+            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+            {BackgroundColor3 = Color3.fromRGB(37, 37, 37)}
+        ):Play()
+    end
+)
 
-            Button.MouseButton1Click:Connect(
-                function()
-                    pcall(callback)
-                end
-            )
+Button.MouseLeave:Connect(
+    function()
+        TweenService:Create(
+            Button,
+            TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+            {BackgroundColor3 = Color3.fromRGB(34, 34, 34)}
+        ):Play()
+    end
+)
 
-            Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
+Button.MouseButton1Click:Connect(
+    function()
+        pcall(callback)
+    end
+)
+
+Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:Toggle(text,default, callback)
             local toggled = false
