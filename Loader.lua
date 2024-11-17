@@ -7,7 +7,7 @@ _G.GameList = {
     [3101667897] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
     [3232996272] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
     [3276265788] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/main/Script/Legends%20of%20Speed.lua",
-    [10260193230] = ""
+    [10260193230] = "https://raw.githubusercontent.com/Artifacttx/YumeHub/refs/heads/main/Script/Normal%20Meme%20Sea.lua"
 }
 
 _G.CheckGame = _G.GameList[game.PlaceId]
