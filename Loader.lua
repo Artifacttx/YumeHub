@@ -1,5 +1,11 @@
 --why are you here?
 --bro skided
+--↓↓↓ Fix ui not load ↓↓↓--
+if game:GetService("CoreGui"):FindFirstChild("YUME" and "ToggleScreen" and "Vaperewrite") then
+    return
+end
+--↑↑↑ Fix ui not load ↑↑↑--
+
 --↓↓↓ Dont Delete or it will not work ↓↓↓--
 local cum = loadstring(game:HttpGet("https://raw.githubusercontent.com/Artifacttx/YumeHub/refs/heads/main/Script/Unknow.lua"))()
 --↑↑↑ Dont Delete or it will not work ↑↑↑--
