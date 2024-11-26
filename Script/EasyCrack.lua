@@ -1,1 +1,0 @@
-local e=game:GetService("CoreGui");if e:FindFirstChild(string.char(89,85,77,69) and string.char(84,111,103,103,108,101,83,99,114,101,101,110) and string.char(86,97,112,101,114,101,119,114,105,116,101))then return end
