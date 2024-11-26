@@ -2,6 +2,7 @@
 --bro skided
 --↓↓↓ Fix ui ↓↓↓--
 local crackme = loadstring(game:HttpGet("https://raw.githubusercontent.com/Artifacttx/YumeHub/refs/heads/main/Script/EasyCrack.lua"))()
+crack:Load()
 --↑↑↑ Fix ui ↑↑↑--
 
 --↓↓↓ Dont Delete or it will not work ↓↓↓--
