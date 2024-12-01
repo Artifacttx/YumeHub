@@ -21,4 +21,6 @@ if _G.GameList[game.PlaceId] then
     loadstring(game:HttpGet(_G.CheckGame))()
 else
     game.Players.LocalPlayer:Kick("Game Not Support")
+    wait(2)
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end
